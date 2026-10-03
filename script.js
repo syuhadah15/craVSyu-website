@@ -27,7 +27,7 @@ const bakingTips=[
   ["Let Cakes Cool Before Decorating","Allow cakes to cool completely before decorating so the frosting stays in place and the texture is better.","https://vt.tiktok.com/ZSbm8RdNg/"]
 ];
 
-function dessertCard(item){return `<article class="card"><div class="card-img"><img src="assets/${item[1]}" alt="${item[0]}"></div><div class="card-body"><h3>${item[0]}</h3></div></article>`}
+function dessertCard(item){return `<article class="card"><div class="card-img"><img src="images/${item[1]}" alt="${item[0]}"></div><div class="card-body"><h3>${item[0]}</h3></div></article>`}
 function renderDesserts(category="Cakes"){
  const grid=document.querySelector("#dessertGrid");if(!grid)return;
  grid.innerHTML=(categoryData[category]||categoryData.Cakes).map(dessertCard).join("");
